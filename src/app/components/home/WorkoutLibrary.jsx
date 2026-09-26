@@ -2,14 +2,17 @@ import WorkoutCard from "./WorkoutCard";
 
 const getWorkouts = async () => {
   try {
-    const res = await fetch("https://api.abcz.workers.dev/api/fitlog");
+    const res = await fetch("https://api.api-store.workers.dev/api/fitlog", {
+      cache: "no-store",
+    });
 
     if (!res.ok) {
-      throw new Error("Failed to fetch workouts data");
+      throw new Error(
+        `Failed to fetch workouts data (status ${res.status})`
+      );
     }
 
     const data = await res.json();
-
 
     return Array.isArray(data) ? data : data.data || [];
   } catch (error) {
@@ -26,7 +29,7 @@ const AllWorkouts = async () => {
   }
 
   return (
-    <div className="container">
+    <div className="container" id="library">
       <div className="px-7 py-8">
         <h2 className="text-4xl font-bold  ">
           THE LIBRARY

@@ -52,7 +52,7 @@ const Hero = () => {
           </h1>
 
           <p
-            className="
+            className="mb-4
               mx-auto mt-5 max-w-xl text-sm leading-6 text-gray-400
               
               sm:mt-6 sm:text-base sm:leading-7
@@ -63,23 +63,22 @@ const Hero = () => {
             FitLog is a dark, no-nonsense gym companion: pick a lift, lock it
             into today&apos;s plan, and watch the week&apos;s work add up.
           </p>
-
-          <button
+          <a
+            href="#library"
             className="
-              mt-6 rounded-lg bg-lime-400 px-6 py-3
-              text-sm font-bold uppercase text-black
-              transition duration-200 hover:bg-lime-300
-              
-              sm:mt-8 sm:px-7 sm:py-4
-            "
+    mt-6 inline-block rounded-lg bg-lime-400 px-6 py-3
+    text-center text-sm font-bold uppercase text-black
+    transition duration-200 hover:bg-lime-300
+    sm:mt-8 sm:px-7 sm:py-4
+  "
           >
             Browse Workouts
-          </button>
+          </a>
         </div>
 
         {/* Hero Image */}
         <div
-          className="
+          className=" 
     relative mx-auto mt-8 shrink-0
     h-[260px] w-[240px]
 

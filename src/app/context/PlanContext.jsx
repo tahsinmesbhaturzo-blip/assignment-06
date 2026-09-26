@@ -19,9 +19,7 @@ export const PlanProvider = ({ children }) => {
       toast.info("Already added to your plan");
       return;
     }
-
     setPlan((previousPlan) => [...previousPlan, workout]);
-
     toast.success("Added to your plan");
   };
 

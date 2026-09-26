@@ -36,16 +36,14 @@ const Navbar = () => {
         {/* Plan & Saved */}
         <div className="flex flex-col items-end gap-1 text-sm sm:flex-row sm:items-center sm:gap-5 md:gap-7">
 
-          {/* Plan */}
+                    {/* Plan */}
           <Link
             href="/my-plan"
             className="flex items-center gap-1.5 text-gray-300 transition hover:text-white sm:gap-2"
           >
             <span>Plan</span>
 
-            <span className="flex h-5 min-w-5 items-center justify-center rounded-full bg-[#b8f500] px-1 text-xs font-bold text-black">
-              <PlanCount />
-            </span>
+            <PlanCount />
           </Link>
 
           {/* Saved */}
