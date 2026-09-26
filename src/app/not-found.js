@@ -4,6 +4,8 @@ export default function NotFound() {
   return (
     <main className="flex min-h-[70vh] flex-col items-center justify-center bg-[#0d0f13] px-4 text-center text-white">
       <h1 className="text-5xl font-extrabold uppercase">404</h1>
+      <h1 className="text-5xl font-extrabold uppercase">Page not found</h1>
+      
       <p className="mt-3 max-w-md text-sm text-gray-500">
         This page doesn&apos;t exist. Maybe the workout you&apos;re looking
         for was never added — or the link is broken.

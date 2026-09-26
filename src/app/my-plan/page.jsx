@@ -29,13 +29,11 @@ const MyPlan = () => {
     }
   );
 
-  // Calculate total minutes
   const totalMinutes = currentList.reduce(
     (total, workout) => total + Number(workout.duration || 0),
     0
   );
 
-  // Calculate total calories
   const totalCalories = currentList.reduce(
     (total, workout) => total + Number(workout.caloriesBurned || 0),
     0
@@ -45,7 +43,6 @@ const MyPlan = () => {
     <main className="min-h-screen bg-[#0d0f13] px-4 py-6 text-white sm:px-6 sm:py-8 md:px-8 lg:px-10">
       <div className="mx-auto max-w-7xl">
 
-        {/* Header */}
         <h1 className="text-2xl font-extrabold uppercase sm:text-3xl">
           My Plan
         </h1>
@@ -54,10 +51,8 @@ const MyPlan = () => {
           Cap of five lifts for today. Finish them, then load more.
         </p>
 
-        {/* Stats */}
         <div className="mt-5 grid grid-cols-1 overflow-hidden rounded-2xl border border-gray-800 bg-[#15171c] sm:grid-cols-3">
           
-          {/* Exercises */}
           <div className="border-b border-gray-800 px-5 py-5 sm:border-b-0 sm:border-r sm:px-6 sm:py-7">
             <p className="text-sm text-gray-500">
               Exercises
@@ -68,7 +63,6 @@ const MyPlan = () => {
             </p>
           </div>
 
-          {/* Minutes */}
           <div className="border-b border-gray-800 px-5 py-5 sm:border-b-0 sm:border-r sm:px-6 sm:py-7">
             <p className="text-sm text-gray-500">
               Minutes
@@ -79,7 +73,6 @@ const MyPlan = () => {
             </p>
           </div>
 
-          {/* Calories */}
           <div className="px-5 py-5 sm:px-6 sm:py-7">
             <p className="text-sm text-gray-500">
               Calories
@@ -91,10 +84,8 @@ const MyPlan = () => {
           </div>
         </div>
 
-        {/* Tabs + Sort */}
         <div className="mt-6 flex flex-col gap-4 sm:mt-7 sm:flex-row sm:items-center sm:justify-between">
 
-          {/* Tabs */}
           <div className="flex w-full rounded-xl border border-gray-800 bg-[#15171c] p-1 sm:w-fit">
             <button
               onClick={() => setActiveTab("plan")}
@@ -104,7 +95,7 @@ const MyPlan = () => {
                   : "text-gray-500 hover:text-gray-300"
               }`}
             >
-              Today's Plan
+              Today&apos;s Plan
             </button>
 
             <button
@@ -119,7 +110,6 @@ const MyPlan = () => {
             </button>
           </div>
 
-          {/* Sort */}
           <div className="flex w-full items-center justify-between gap-2 text-sm text-gray-500 sm:w-auto sm:justify-normal">
             <span>Sort By</span>
 
@@ -135,7 +125,6 @@ const MyPlan = () => {
           </div>
         </div>
 
-        {/* Empty State / Workout List */}
         {currentList.length === 0 ? (
           <div className="mt-6 flex min-h-[275px] flex-col items-center justify-center rounded-2xl border border-dashed border-gray-800 px-5 text-center">
             
@@ -167,20 +156,16 @@ const MyPlan = () => {
                 className="rounded-2xl border border-gray-800 bg-[#15171c] p-4"
               >
 
-                {/* Workout Content */}
                 <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
 
-                  {/* Left */}
                   <div className="flex min-w-0 flex-1 items-start gap-3 sm:items-center sm:gap-4">
 
-                    {/* Image */}
                     <img
                       src={workout.image}
                       alt={workout.name}
                       className="h-20 w-24 shrink-0 rounded-xl object-cover sm:h-20 sm:w-32"
                     />
 
-                    {/* Workout Info */}
                     <div className="min-w-0">
                       <h2 className="truncate text-sm font-bold uppercase sm:text-base">
                         {workout.name}
@@ -206,7 +191,7 @@ const MyPlan = () => {
                     </div>
                   </div>
 
-                  {/* Right / Buttons */}
+
                   <div className="flex w-full flex-col gap-2 sm:w-auto sm:flex-row sm:items-center sm:gap-3">
 
                     <Link
